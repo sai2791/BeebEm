@@ -59,7 +59,7 @@ bool MassageNetworks = false; // massage network numbers on send/receive (add/su
 int inmask, outmask;
 
 bool EconetStateChanged = false;
-char EconetEnabled;							// Enable hardware
+bool EconetEnabled;							// Enable hardware
 bool EconetNMIenabled;						// 68B54 -> NMI enabled. (IC97)
 int EconetTrigger;							// Poll timer
 
@@ -368,8 +368,8 @@ void EconetReset(void) {
 	sockaddr_in service;
 	bzero(&service, sizeof(service));
 	service.sin_family = AF_INET;
-	service.sin_addr.s_addr = htonl(INADDR_ANY); //inet_addr("127.0.0.1");
-
+	service.sin_addr.s_addr = INADDR_ANY; //inet_addr("127.0.0.1");
+    
 	// Already have a station num? Either from command line or a free one 
 	// we found on previous reset.
 	if (EconetStationNumber != 0) {
