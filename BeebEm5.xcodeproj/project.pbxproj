@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B7FA63325ECD89A008E8975 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7FA63225ECD89A008E8975 /* CFNetwork.framework */; };
+		8B7FA63525ECD8A6008E8975 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7FA63425ECD8A6008E8975 /* Network.framework */; };
+		8B7FA63825ECD8C5008E8975 /* libnetwork.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7FA63725ECD8C5008E8975 /* libnetwork.tbd */; };
+		8B7FA63C25ECE431008E8975 /* AUNMap in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FA63B25ECE431008E8975 /* AUNMap */; };
 		DC43595124B62F4F002624FE /* serialdevices.cc in Sources */ = {isa = PBXBuildFile; fileRef = DCCCC2DA24A33D3700840082 /* serialdevices.cc */; };
 		DC6A476524A54160007E4276 /* Arm.cc in Sources */ = {isa = PBXBuildFile; fileRef = DCCCC2C824A33D3700840082 /* Arm.cc */; };
 		DC6A476624A541F1007E4276 /* ArmDisassembler.cc in Sources */ = {isa = PBXBuildFile; fileRef = DCCCC2DC24A33D3700840082 /* ArmDisassembler.cc */; };
-		DC6A476924A54541007E4276 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6A476824A54541007E4276 /* libz.tbd */; };
+		DC6A476924A54541007E4276 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6A476824A54541007E4276 /* libz.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
 		DC6A476B24A54DA3007E4276 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6A476A24A54DA3007E4276 /* CoreFoundation.framework */; };
 		DC85C5F524AB1BE300CCD72E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC85C5ED24AB1BE300CCD72E /* README.txt */; };
 		DC85C5F624AB1BE300CCD72E /* COPYRIGHT.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC85C5EE24AB1BE300CCD72E /* COPYRIGHT.txt */; };
@@ -81,6 +85,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B7FA63225ECD89A008E8975 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8B7FA63425ECD8A6008E8975 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		8B7FA63725ECD8C5008E8975 /* libnetwork.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libnetwork.tbd; path = usr/lib/libnetwork.tbd; sourceTree = SDKROOT; };
+		8B7FA63B25ECE431008E8975 /* AUNMap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUNMap; sourceTree = "<group>"; };
+		8BDD67EF25EC35F900FAE575 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		8BDD67F225EC360500FAE575 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
 		DC04C64824BE059900D46EAC /* beebem5-distribution.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "beebem5-distribution.zip"; sourceTree = "<group>"; };
 		DC10ACE22567BA1300DA8E32 /* create_dmg.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = create_dmg.sh; sourceTree = "<group>"; };
 		DC59F1A224BE01D000687D2A /* beebem5-distribution */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "beebem5-distribution"; sourceTree = "<group>"; };
@@ -219,6 +229,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7FA63825ECD8C5008E8975 /* libnetwork.tbd in Frameworks */,
+				8B7FA63525ECD8A6008E8975 /* Network.framework in Frameworks */,
+				8B7FA63325ECD89A008E8975 /* CFNetwork.framework in Frameworks */,
 				DC6A476B24A54DA3007E4276 /* CoreFoundation.framework in Frameworks */,
 				DC6A476924A54541007E4276 /* libz.tbd in Frameworks */,
 			);
@@ -230,6 +243,11 @@
 		DC6A476724A54540007E4276 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B7FA63725ECD8C5008E8975 /* libnetwork.tbd */,
+				8B7FA63425ECD8A6008E8975 /* Network.framework */,
+				8B7FA63225ECD89A008E8975 /* CFNetwork.framework */,
+				8BDD67F225EC360500FAE575 /* libc.tbd */,
+				8BDD67EF25EC35F900FAE575 /* libc++.1.tbd */,
 				DC6A476A24A54DA3007E4276 /* CoreFoundation.framework */,
 				DC6A476824A54541007E4276 /* libz.tbd */,
 			);
@@ -331,6 +349,7 @@
 				DCD5DC412565EE7600FB151D /* teletext.fnt */,
 				DCD5DC1D2565E83300FB151D /* LICENSE */,
 				DC85C5ED24AB1BE300CCD72E /* README.txt */,
+				8B7FA63B25ECE431008E8975 /* AUNMap */,
 				DC85C5EF24AB1BE300CCD72E /* README_MAC.txt */,
 				DC85C5EE24AB1BE300CCD72E /* COPYRIGHT.txt */,
 			);
@@ -478,6 +497,9 @@
 		DCCCC29324A338ED00840082 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Andrew Hague";
@@ -531,6 +553,7 @@
 				DCD5DC322565E88600FB151D /* Phroms in Resources */,
 				DCD5DC1B2565E7EF00FB151D /* beebstate in Resources */,
 				DCD5DC2F2565E86F00FB151D /* RelayOff.snd in Resources */,
+				8B7FA63C25ECE431008E8975 /* AUNMap in Resources */,
 				DCD5DC182565E7CC00FB151D /* BeebFile in Resources */,
 				DC85C5F524AB1BE300CCD72E /* README.txt in Resources */,
 			);
@@ -734,6 +757,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
+				"DYLIB_INSTALL_NAME_BASE[arch=*]" = "";
 				INFOPLIST_FILE = BeebEm5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
