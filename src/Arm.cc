@@ -3361,7 +3361,7 @@ inline uint32 CArm::getDataProcessingRegisterOperand2S()
 		return getRegisterWithPSR(rm);
 	
 	uint32 carry;
-	uint32 result;
+    uint32 result = 0;
 
 	// if register-specified shift amount
 	if( getBit(currentInstruction, 4) )
@@ -3437,6 +3437,7 @@ inline uint32 CArm::getDataProcessingRegisterOperand2S()
 			{
 				case LSL:
 				{
+                    carry = getBit(regValue,31);
 					// not reached since is same as no shift which is already
 					// accounted for in first check
 					break;

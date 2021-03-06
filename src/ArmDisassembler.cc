@@ -51,7 +51,7 @@ char *decodeMultiplyOrDataProcessing(uint32 address, uint32 instruction, char *b
 		return decodeDataProcessing(address, instruction, buff);
 	}
 
-	strcpy(buff, "ERROR DISASSEMBLING IN decodeMultiplyOrDataProcessing()");
+//	strcpy(buff, "ERROR DISASSEMBLING IN decodeMultiplyOrDataProcessing()");
 	return buff;
 }
 
@@ -69,7 +69,7 @@ char *decodeSingleDataSwapOrDataProcessing(uint32 address, uint32 instruction, c
 		return decodeDataProcessing(address, instruction, buff);
 	}
 
-	strcpy(buff, "ERROR DISASSEMBLING IN decodeSingleDataSwapOrDataProcessing()");
+//	strcpy(buff, "ERROR DISASSEMBLING IN decodeSingleDataSwapOrDataProcessing()");
 	return buff;
 }
 

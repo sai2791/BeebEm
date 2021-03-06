@@ -315,14 +315,14 @@ static int NewCmd = 0;
   {
   case kEventClassKeyboard:
     
-//	fprintf(stderr, "Key Event Kind %d\n", GetEventKind(event));
+	fprintf(stderr, "Key Event Kind %d\n", GetEventKind(event));  //Changed
 	
     switch (GetEventKind(event)) 
 	{
       case kEventRawKeyDown:
         GetEventParameter(event, kEventParamKeyMacCharCodes, typeChar, NULL, sizeof(char), NULL, &charCode);
         GetEventParameter(event, kEventParamKeyCode, typeUInt32, NULL, sizeof(int), NULL, &keycode);
-//      fprintf(stderr, "Key pressed: code = %d, '%c'\n", keycode, charCode);
+      fprintf(stderr, "Key pressed: code = %d, '%c'\n", keycode, charCode);  //Changed
 		if ( (NewCmd) && (keycode == 6) )
 		{
 //			fprintf(stderr, "cmd-Z pressed, NewCmd = %d\n", NewCmd);
@@ -356,7 +356,7 @@ static int NewCmd = 0;
       case kEventRawKeyUp:
         GetEventParameter(event, kEventParamKeyMacCharCodes, typeChar, NULL, sizeof(char), NULL, &charCode);
         GetEventParameter(event, kEventParamKeyCode, typeUInt32, NULL, sizeof(int), NULL, &keycode);
-//        fprintf(stderr, "Key released: code = %d, '%c'\n", keycode, charCode);
+        fprintf(stderr, "Key released: code = %d, '%c'\n", keycode, charCode);  //Changed
 		mainWin->KeyUp(keycode);
 		break;
       case 4:
@@ -370,7 +370,7 @@ static int NewCmd = 0;
 		NewCaps = keycode & 0x0800;
 	    NewCmd = keycode & 0x0100;
 
-//		fprintf(stderr, "Key modifier : code = %08x\n", keycode);
+		fprintf(stderr, "Key modifier : code = %08x\n", keycode);  //Changed
 		
 		if (LastShift != NewShift) if (LastShift) mainWin->KeyUp(200); else mainWin->KeyDown(200);
 		if (LastCtrl  != NewCtrl)  if (LastCtrl)  mainWin->KeyUp(201); else mainWin->KeyDown(201);
@@ -382,7 +382,7 @@ static int NewCmd = 0;
 
   case kEventClassMouse:
 
-//	WriteLog("Key Event Kind %d\n", GetEventKind(event));
+	WriteLog("Key Event Kind %d\n", GetEventKind(event));  //Changed
 	
 	Point posn;
 	EventMouseButton btn;
@@ -740,7 +740,7 @@ int i;
   }
 
 
-  tlog = fopen("/users/jonwelch/trace.log", "wt");
+  tlog = fopen("/users/steveinglis/trace.log", "wt");
 //  tlog = NULL;
 #endif
     

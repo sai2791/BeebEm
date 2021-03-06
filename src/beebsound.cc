@@ -440,7 +440,7 @@ void LoadSoundSamples(void) {
 			fd = fopen(FileName, "rb");
 			if (fd != NULL) {
 				fseek(fd, 0, SEEK_END);
-				SoundSamples[i].len = ftell(fd);
+				SoundSamples[i].len = (int) ftell(fd);
 				SoundSamples[i].pBuf = (unsigned char *)malloc(SoundSamples[i].len);
 				fseek(fd, 0, SEEK_SET);
 				fread(SoundSamples[i].pBuf, 1, SoundSamples[i].len, fd);

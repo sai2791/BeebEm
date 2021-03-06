@@ -26,6 +26,7 @@ import Carbon
 // AND
 // https://stackoverflow.com/questions/25981553/cvdisplaylink-with-swift
 
+
 class BeebViewController: NSViewController {
 
     @IBOutlet var imageView: BeebImageView!
@@ -35,8 +36,7 @@ class BeebViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
- 
+               
         // create a callback for the DisplayLink to the update() method of this class
         let displayLinkOutputCallback: CVDisplayLinkOutputCallback = {
             (displayLink: CVDisplayLink, inNow: UnsafePointer<CVTimeStamp>, inOutputTime: UnsafePointer<CVTimeStamp>, flagsIn: CVOptionFlags, flagsOut: UnsafeMutablePointer<CVOptionFlags>, displayLinkContext: UnsafeMutableRawPointer?) -> CVReturn in

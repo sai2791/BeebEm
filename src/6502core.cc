@@ -616,11 +616,13 @@ INLINE static void JSRInstrHandler(int16 address) {
 	  *pcptr=0;
 	  fprintf(osclilog,"%s\n",pcbuf);
   }
-  /*if (ProgramCounter==0xffdd) {
-	  char errstr[250];
-	  sprintf(errstr,"OSFILE called\n");
-	  MessageBox(GETHWND,errstr,"BBC Emulator",MB_OKCANCEL|MB_ICONERROR);
-  }*/
+  /*
+      if (ProgramCounter==0xffdd) {
+        char errstr[250];
+        sprintf(errstr,"OSFILE called\n");
+        MessageBox(GETHWND,errstr,"BBC Emulator",MB_OKCANCEL|MB_ICONERROR);
+      }
+ */
 
 } /* JSRInstrHandler */
 
